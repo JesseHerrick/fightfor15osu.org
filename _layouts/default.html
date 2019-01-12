@@ -30,6 +30,8 @@
 
     {% if page.social_image %}
     <meta property="og:image" content="https://fightfor15osu.org{{page.social_image}}" />
+    {% else %}
+    <meta property="og:image" content="https://fightfor15osu.org{{site.social_image}}" />
     {% endif %}
   </head>
 
