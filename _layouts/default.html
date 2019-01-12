@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% if page.title %}
+    <title>{{page.title}} | {{site.title}}</title>
+    <meta property="og:title" content="{{page.title}} | {{site.title}}" />
+    {% else %}
+    <title>{{site.title}}</title>
+    <meta property="og:title" content="{{site.title}}" />
+    {% endif %}
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,900" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css" />
+
+    <meta charset='UTF-8' />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="keywords" content="fight for $15, fight for 15, fight, for, 15, ohio state, ohio state university, osu, minimum wage" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="og:url" content="https://fightfor15osu.org" />
+    <meta property="og:type" content="website" />
+
+    {% if page.description %}
+    <meta name="description" content="{{page.description}}" />
+    <meta property="og:description" content="{{page.description}}" />
+    {% else %}
+    <meta name="description" content="{{site.description}}" />
+    <meta property="og:description" content="{{site.description}}" />
+    {% endif %}
+
+    {% if page.social_image %}
+    <meta property="og:image" content="https://fightfor15osu.org{{page.social_image}}" />
+    {% endif %}
+  </head>
+
+  <body>
+    {{content}}
+  </body>
+</html>
