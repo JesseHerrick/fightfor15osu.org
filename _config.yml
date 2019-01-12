@@ -2,6 +2,7 @@ title: Fight for $15 at The Ohio State University
 description: A campaign for a living wage for all university workers at The Ohio State University.
 url: "https://fightfor15osu.org" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: ff15osu
+social_image: /images/ff15osu-social.png
 
 # Build settings
 markdown: kramdown
