@@ -92,12 +92,14 @@ html, body {
   @include mobile() {
     padding: 2rem;
     margin: 4rem auto 0;
+    font-size: 16px;
   }
   height: 100%;
   max-width: 18rem;
 
   input {
-    border-radius: 0;
+    border-radius: 0 !important;
+    -webkit-appearance: none;
   }
 
   input[type="text"], input[type="email"] {
