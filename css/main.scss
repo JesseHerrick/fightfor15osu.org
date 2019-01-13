@@ -87,16 +87,24 @@ html, body {
 
 .contact-form {
   background-color: #fff;
-  padding: 3rem 4rem;
   margin: 1rem auto 0;
   border-radius: 3px;
   @include mobile() {
-    padding: 2rem;
     margin: 4rem auto 0;
     font-size: 16px;
   }
   height: 100%;
-  max-width: 18rem;
+  max-width: 24rem;
+
+  #mc_embed_signup {
+    width: 85%;
+    @include mobile() {
+      max-width: 100%;
+    }
+    display: block;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
 
   input {
     border-radius: 0 !important;
@@ -109,6 +117,7 @@ html, body {
     margin: .75rem 0;
     border: none;
     border-bottom: 2px solid $red;
+    transition: border-bottom 150ms ease;
 
     &:focus {
       outline: none;
@@ -156,4 +165,51 @@ html, body {
     width: 100%;
     background-color: #fff;
   }
+}
+
+footer.footer {
+  min-height: 4rem;
+  background-color: #eee;
+  display: grid;
+  @include mobile() {
+    display: block;
+  }
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, calc(100% / 3));
+  padding: 1rem 0;
+
+  ul {
+    list-style: none;
+
+    li { line-height: 2; }
+  }
+
+  a {
+    color: $red;
+    opacity: .75;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1.5;
+    border-bottom: 2px solid $red;
+    transition: opacity 150ms ease;
+
+    &:hover {
+      opacity: .9;
+    }
+  }
+}
+
+nav.footer__social {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+.footer__disclaimer {
+  grid-row: 1 / 1;
+  grid-column: 2 / 2;
+}
+
+.footer__nav {
+  grid-row: 1 / 1;
+  grid-column: 3 / 3;
 }
